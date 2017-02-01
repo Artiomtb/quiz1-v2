@@ -1,8 +1,12 @@
 <?php
 
-use Exceptions\ClassNotFoundException;
-use Exceptions\InvalidPostKeyException;
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
+use Exceptions\{ClassNotFoundException, InvalidPostKeyException};
 use Model\Renderable;
+use Controller\ProductCreator;
 
 require_once 'Autoloader.php';
 
@@ -42,6 +46,8 @@ try {
 } catch (InvalidPostKeyException $e) {
     die($e->getMessage());
 }
+
+//print_r($products);
 ?>
 
 <!doctype html>
