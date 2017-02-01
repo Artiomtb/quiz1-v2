@@ -1,7 +1,7 @@
 <?php
 
 use Exceptions\ClassNotFoundException;
-use Exceptions\InvalidPostKeyException;
+use Exceptions\InvalidProductKeyException;
 use Model\Renderable;
 
 require_once 'Autoloader.php';
@@ -39,7 +39,7 @@ try {
     $products = [$iPhone, $iPad, $macBook];
 } catch (ClassNotFoundException $e) {
     die($e->getMessage());
-} catch (InvalidPostKeyException $e) {
+} catch (InvalidProductKeyException $e) {
     die($e->getMessage());
 }
 ?>
