@@ -3,6 +3,7 @@
 use Exceptions\ClassNotFoundException;
 use Exceptions\InvalidPostKeyException;
 use Model\Renderable;
+use Model\ProductCreator;
 
 require_once 'Autoloader.php';
 
