@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'iPhone' => 'Model\IPhoneProduct',
-    'iPad' => 'Model\IPadProduct',
-    'MacBook' => 'Model\MacBookProduct'
+    'iPhone' => 'Model\Products\IPhoneProduct',
+    'iPad' => 'Model\Products\IPadProduct',
+    'MacBook' => 'Model\Products\MacBookProduct'
 ];
