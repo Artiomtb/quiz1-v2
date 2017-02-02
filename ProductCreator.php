@@ -1,5 +1,6 @@
 <?php
 
+use Exceptions\ClassNotFoundException;
 use Exceptions\InvalidPostKeyException;
 use Model\Renderable;
 
@@ -48,14 +49,21 @@ class ProductCreator {
      * @param array $value
      * @return mixed|object
      * @throws InvalidPostKeyException
+     * @throws ClassNotFoundException
      */
     public function make(string $key, array $value): Renderable {
 
-        if(array_key_exists($key, $this->config)){
+        if (class_exists($this->config[$key])) {
+
+            if(array_key_exists($key, $this->config)) {
             
-            return new $this->config[$key]($value);
+                return new $this->config[$key]($value);
+            } else {
+                throw new InvalidPostKeyException();
+            }
+            
         } else {
-            throw new InvalidPostKeyException('Key is invalid');
+            throw new ClassNotFoundException();
         }
     }
 }
