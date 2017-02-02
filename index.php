@@ -35,7 +35,6 @@ try {
             'price' => '60000'
         ]
     );
-
     $products = [$iPhone, $iPad, $macBook];
 } catch (ClassNotFoundException $e) {
     die($e->getMessage());
