@@ -58,7 +58,7 @@ try {
 <?php
 foreach ($products as $product) {
     if ($product instanceof Renderable) {
-        echo $product->render() . '<br>';
+        echo '<hr>' . $product->render() . '<br>';
     }
 }
 ?>
