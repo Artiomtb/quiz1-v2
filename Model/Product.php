@@ -17,9 +17,12 @@ abstract class Product implements Renderable
      */
     protected $deviceParams = [];
 
-    public function setParam(string $nameParam, string $valueParam)
+    public function __construct(string $device, array $valueParam)
     {
-        $this->deviceParams[$nameParam] = $valueParam;
+        $this->device = $device;
+        foreach ($valueParam as $key => $value){
+            $this->deviceParams[$key] = $value;
+        }
     }
 
     /**

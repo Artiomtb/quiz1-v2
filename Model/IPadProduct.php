@@ -12,4 +12,4 @@ namespace Model;
  * Class IPadProduct
  * @package Model
  */
-class IPadProduct extends IPhoneProduct{}
+class IPadProduct extends Product{}

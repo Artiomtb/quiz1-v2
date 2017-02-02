@@ -59,12 +59,7 @@ class ProductCreator
     {
         if(array_key_exists($device, $this->config)){
             if(class_exists($this->config[$device])){
-                $product = new $this->config[$device]();
-                $product->device = $device;
-                foreach ($params as $key => $value) {
-                    $product->setParam($key, $value);
-                }
-                return $product;
+                return new $this->config[$device]($device, $params);
             } else {
                 throw new ClassNotFoundException("Class not found!");
             }
