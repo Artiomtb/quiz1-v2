@@ -58,7 +58,6 @@ try {
 <?php
 foreach ($products as $product) {
     if ($product instanceof Renderable) {
-        echo 'prod';
         echo $product->render() . '<br>';
     }
 }
