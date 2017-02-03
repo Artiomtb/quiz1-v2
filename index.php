@@ -2,6 +2,7 @@
 
 use Exceptions\ClassNotFoundException;
 use Exceptions\InvalidPostKeyException;
+use Model\Renderable;
 
 require_once 'Autoloader.php';
 
@@ -57,6 +58,7 @@ try {
 <?php
 foreach ($products as $product) {
     if ($product instanceof Renderable) {
+        echo 'prod';
         echo $product->render() . '<br>';
     }
 }
