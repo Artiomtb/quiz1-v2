@@ -8,8 +8,16 @@
  */
 
 namespace Model;
+/**
+ * Class IPadProduct
+ * @package Model
+ */
 
 class IPadProduct implements Renderable {
+    /**
+     * @var array
+     */
+
     public $description;
     /*
      * Class IPadProduct

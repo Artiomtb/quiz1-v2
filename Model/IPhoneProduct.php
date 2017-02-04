@@ -8,16 +8,23 @@
  */
 
 namespace Model;
+/**
+ * Class IPhoneProduct
+ * @package Model
+ */
 
 class IPhoneProduct implements Renderable {
     public $description;
 
     /**
      * IPhoneProduct constructor.
+     * @param array $description
      */
-    public function __construct(array $params) {
-        $this->description = $params;
+
+    public function __construct(array $description) {
+        $this->description = $description;
     }
+
     public function render(): string {
         $output  = "<h2>iPhone</h2>";
         $output .= "<p>Color: <strong>".$this->description['color']."</strong></p>";

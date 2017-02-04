@@ -10,10 +10,12 @@
 namespace Model;
 
 class MacBookProduct implements Renderable {
-     public $description;
+
+    public $description;
     /*
      * Class MacBookProduct
      * MacBookProduct constructor.
+     * @var array
      */
     public function __construct(array $description) {
         $this->description = $description;
